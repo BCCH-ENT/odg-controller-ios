@@ -1,0 +1,26 @@
+PODS:
+  - PubNub (4.5.9):
+    - PubNub/Core (= 4.5.9)
+  - PubNub/Core (4.5.9)
+  - QuickBlox-static (2.9)
+
+DEPENDENCIES:
+  - PubNub (from `https://github.com/pubnub/objective-c`)
+  - QuickBlox-static
+
+EXTERNAL SOURCES:
+  PubNub:
+    :git: https://github.com/pubnub/objective-c
+
+CHECKOUT OPTIONS:
+  PubNub:
+    :commit: f87d2d9df5cc8de62e51d24ba4d5b8e398b0596c
+    :git: https://github.com/pubnub/objective-c
+
+SPEC CHECKSUMS:
+  PubNub: fbcd3f98bced45b7d61de79cf3cd6822ee8c1858
+  QuickBlox-static: 4e2ce0eeeeccf5d683c719038b477a9b2ac20965
+
+PODFILE CHECKSUM: ba555c56194fb18f58f87812dc10a5caf2bea844
+
+COCOAPODS: 1.2.0.beta.1

@@ -21,8 +21,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eRQ-4I-wE2" userLabel="Take Photo">
+                                <rect key="frame" x="16" y="387" width="343" height="74"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Take Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2au-3g-WV6">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tcu-7Z-d3L">
+                                        <rect key="frame" x="0.0" y="18" width="343" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="4El-6A-vc6"/>
+                                        </constraints>
+                                        <state key="normal" title="Take and Upload Image"/>
+                                        <connections>
+                                            <action selector="TakeImageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hez-Jw-EFN"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="(after taking image, restart streaming)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXa-3j-qxR">
+                                        <rect key="frame" x="0.0" y="58" width="343" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="22d-Im-32W"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jaO-Zd-QxU" userLabel="Control View">
+                                <rect key="frame" x="16" y="487" width="343" height="58"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Control View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPN-O2-gpt">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJG-m0-xvC">
+                                        <rect key="frame" x="0.0" y="18" width="343" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Vgz-kv-Y6E"/>
+                                        </constraints>
+                                        <state key="normal" title="Flip View"/>
+                                        <connections>
+                                            <action selector="FlipViewAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fix-y4-Z99"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ui3-Ts-gww" userLabel="Messages">
-                                <rect key="frame" x="16" y="20" width="343" height="88"/>
+                                <rect key="frame" x="16" y="20" width="343" height="98"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7TS-NY-SCc">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="18"/>
@@ -37,12 +88,12 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoM-e6-SPe">
-                                        <rect key="frame" x="0.0" y="58" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="58" width="343" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Vrm-CV-cZK"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Krb-r1-Swy"/>
                                         </constraints>
                                         <state key="normal" title="Send Message"/>
                                         <connections>
@@ -57,7 +108,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tBB-3t-p1w" userLabel="Control Images">
-                                <rect key="frame" x="16" y="116" width="343" height="193"/>
+                                <rect key="frame" x="16" y="136" width="343" height="243"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Control Images" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS7-ML-CUq">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="18"/>
@@ -66,9 +117,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2x-5X-jfZ">
-                                        <rect key="frame" x="0.0" y="23" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="23" width="343" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="oG6-sf-qGN"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="OxD-Qh-PAW"/>
                                         </constraints>
                                         <state key="normal" title="Show Image"/>
                                         <connections>
@@ -76,9 +127,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBy-bz-wAM">
-                                        <rect key="frame" x="0.0" y="58" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="68" width="343" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="oWZ-Of-dOg"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="wws-pG-KcI"/>
                                         </constraints>
                                         <state key="normal" title="Hide Image"/>
                                         <connections>
@@ -86,9 +137,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVA-yg-iLK">
-                                        <rect key="frame" x="0.0" y="93" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="113" width="343" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="n42-u3-cXp"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="asG-yC-F8U"/>
                                         </constraints>
                                         <state key="normal" title="Zoom Image"/>
                                         <connections>
@@ -96,9 +147,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="La1-Qm-vYV">
-                                        <rect key="frame" x="0.0" y="128" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="158" width="343" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Spj-qN-Kh3"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="fst-3Z-jqC"/>
                                         </constraints>
                                         <state key="normal" title="Reload Image"/>
                                         <connections>
@@ -106,12 +157,12 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oyJ-y8-TfD" userLabel="Scrolling">
-                                        <rect key="frame" x="0.0" y="163" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="203" width="343" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGg-yu-Xqw">
-                                                <rect key="frame" x="0.0" y="0.0" width="167" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="166.5" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="bfa-hE-XSs"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="tQQ-N5-PQF"/>
                                                 </constraints>
                                                 <state key="normal" title="Scroll Left"/>
                                                 <connections>
@@ -119,9 +170,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKr-Ei-2FC">
-                                                <rect key="frame" x="177" y="0.0" width="166" height="30"/>
+                                                <rect key="frame" x="176.5" y="0.0" width="166.5" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="aw1-56-geL"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="dpM-oX-Yve"/>
                                                 </constraints>
                                                 <state key="normal" title="Scroll Right"/>
                                                 <connections>
@@ -136,72 +187,21 @@
                                     <constraint firstItem="oyJ-y8-TfD" firstAttribute="leading" secondItem="tBB-3t-p1w" secondAttribute="leading" id="iOw-VV-srX"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eRQ-4I-wE2" userLabel="Take Photo">
-                                <rect key="frame" x="16" y="317" width="343" height="64"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Take Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2au-3g-WV6">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tcu-7Z-d3L">
-                                        <rect key="frame" x="0.0" y="18" width="343" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="ZFB-46-zEm"/>
-                                        </constraints>
-                                        <state key="normal" title="Take and Upload Image"/>
-                                        <connections>
-                                            <action selector="TakeImageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hez-Jw-EFN"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="(after taking image, restart streaming)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXa-3j-qxR">
-                                        <rect key="frame" x="0.0" y="48" width="343" height="16"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="16" id="22d-Im-32W"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jaO-Zd-QxU" userLabel="Control View">
-                                <rect key="frame" x="16" y="389" width="343" height="48"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Control View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPN-O2-gpt">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJG-m0-xvC">
-                                        <rect key="frame" x="0.0" y="18" width="343" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Vgz-kv-Y6E"/>
-                                        </constraints>
-                                        <state key="normal" title="Flip View"/>
-                                        <connections>
-                                            <action selector="FlipViewAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fix-y4-Z99"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="eRQ-4I-wE2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tBB-3t-p1w" secondAttribute="bottom" constant="20" id="1Pe-1J-KI6"/>
+                            <constraint firstItem="eRQ-4I-wE2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tBB-3t-p1w" secondAttribute="bottom" constant="30" id="1Pe-1J-KI6"/>
                             <constraint firstItem="eRQ-4I-wE2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="28A-Bv-VRa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ui3-Ts-gww" secondAttribute="trailing" id="8By-g3-peA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jaO-Zd-QxU" secondAttribute="trailing" id="8hq-vR-jy7"/>
-                            <constraint firstItem="tBB-3t-p1w" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ui3-Ts-gww" secondAttribute="bottom" constant="20" id="DvE-Xj-0nW"/>
+                            <constraint firstItem="tBB-3t-p1w" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ui3-Ts-gww" secondAttribute="bottom" constant="30" id="DvE-Xj-0nW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tBB-3t-p1w" secondAttribute="trailing" id="TkJ-bw-rWs"/>
                             <constraint firstItem="tBB-3t-p1w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aBK-oQ-tPF"/>
                             <constraint firstItem="ui3-Ts-gww" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hzf-PF-Qhb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eRQ-4I-wE2" secondAttribute="trailing" id="ikA-Tp-lka"/>
                             <constraint firstItem="ui3-Ts-gww" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="lVC-3X-g3b"/>
                             <constraint firstItem="jaO-Zd-QxU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="oHB-0X-6yD"/>
-                            <constraint firstItem="jaO-Zd-QxU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eRQ-4I-wE2" secondAttribute="bottom" constant="20" id="zOZ-4T-njo"/>
+                            <constraint firstItem="jaO-Zd-QxU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eRQ-4I-wE2" secondAttribute="bottom" constant="30" id="zOZ-4T-njo"/>
                         </constraints>
                     </view>
                     <connections>

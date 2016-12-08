@@ -21,7 +21,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         pnInterface = PubNubInterface.sharedInstance
     }
 
-
     // MARK: UITextFieldDelegate
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
@@ -33,8 +32,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     func textFieldDidEndEditing(_ textField: UITextField)
     {
-        pnInterface.sendMessage(msg: messageInput.text!)
-        messageInput.text = ""
     }
 
 
@@ -44,6 +41,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     {
         pnInterface.sendMessage(msg: messageInput.text!)
         messageInput.text = ""
+        
+        if (messageInput.isFirstResponder) {
+            messageInput.resignFirstResponder()
+        }
     }
     
     @IBAction func ShowImageAction(_ sender: UIButton)

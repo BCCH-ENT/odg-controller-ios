@@ -223,7 +223,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0810;
-				ORGANIZATIONNAME = ___BCCHILDRENSHOSPITAL___;
+				ORGANIZATIONNAME = "___BCCHILDRENSHOSPITAL___";
 				TargetAttributes = {
 					A966E591FE48076512FD89D5 = {
 						DevelopmentTeam = QBG3KTGHDV;

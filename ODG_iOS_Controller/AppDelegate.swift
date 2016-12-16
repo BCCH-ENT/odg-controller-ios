@@ -13,19 +13,6 @@ import PubNub
 class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
 
     var window: UIWindow?
-
-    /*
-    func applicationDidFinishLaunching(_ application: UIApplication)
-    {
-        let configuration = PNConfiguration(publishKey: "pub-c-ffee06f7-78b5-483c-b800-fae8f3a67f0c", subscribeKey: "sub-c-3dc063c8-9bc0-11e6-814f-0619f8945a4f")
-        self.client = PubNub.clientWithConfiguration(configuration)
-        
-        pnInterface = PubNubInterface(client: self.client)
-
-        let view: ViewController = window!.rootViewController as! ViewController
-        view.registerPnInterface(pn: pnInterface)
-    }
-    */
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
